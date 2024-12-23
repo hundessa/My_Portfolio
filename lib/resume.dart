@@ -24,14 +24,6 @@ class Resume extends StatelessWidget {
                       ..style = PaintingStyle.stroke
                       ..strokeWidth = 1
                       ..color = Colors.white,
-                    shadows: [
-                      Shadow(
-                        offset: const Offset(-6.0, 2.0),
-                        blurRadius: 0,
-                        color: const Color(0xFFDF6363)
-                            .withAlpha((0.5 * 255).toInt()),
-                      ),
-                    ],
                   ),
                   textAlign: TextAlign.center,
                 ),

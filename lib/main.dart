@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/contact.dart';
+import 'package:my_portfolio/portfolio.dart';
 import 'resume.dart';
 import 'skills.dart';
 
@@ -296,6 +298,30 @@ class _PortfolioHomeState extends State<PortfolioHome> {
                 ),
               ),
               const Skills(),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 80.0, top: 140.0),
+                child: SizedBox(
+                  height: 2.0,
+                  width: 1600.0,
+                  child: DecoratedBox(
+                    decoration:
+                        BoxDecoration(color: Colors.black), // Color of the line
+                  ),
+                ),
+              ),
+              const MyPortfolio(),
+              const Padding(
+                padding: EdgeInsets.only(bottom: 80.0, top: 140.0),
+                child: SizedBox(
+                  height: 2.0,
+                  width: 1600.0,
+                  child: DecoratedBox(
+                    decoration:
+                        BoxDecoration(color: Colors.black), // Color of the line
+                  ),
+                ),
+              ),
+              const Contact(),
             ],
           ),
         ),
