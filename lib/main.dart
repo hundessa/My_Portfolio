@@ -275,50 +275,34 @@ class _PortfolioHomeState extends State<PortfolioHome> {
                 ),
               ),
               const Padding(
-                padding: EdgeInsets.only(bottom: 80.0, top: 140.0),
-                child: SizedBox(
-                  height: 2.0,
-                  width: 1600.0,
-                  child: DecoratedBox(
-                    decoration:
-                        BoxDecoration(color: Colors.black), // Color of the line
-                  ),
+                padding: EdgeInsets.only(top: 140.0, bottom: 80.0),
+                child: Divider(
+                  color: Colors.black,
+                  thickness: 2,
                 ),
               ),
               const Resume(),
               const Padding(
-                padding: EdgeInsets.only(bottom: 80.0, top: 140.0),
-                child: SizedBox(
-                  height: 2.0,
-                  width: 1600.0,
-                  child: DecoratedBox(
-                    decoration:
-                        BoxDecoration(color: Colors.black), // Color of the line
-                  ),
+                padding: EdgeInsets.only(top: 140.0, bottom: 80.0),
+                child: Divider(
+                  color: Colors.black,
+                  thickness: 2,
                 ),
               ),
               const Skills(),
               const Padding(
-                padding: EdgeInsets.only(bottom: 80.0, top: 140.0),
-                child: SizedBox(
-                  height: 2.0,
-                  width: 1600.0,
-                  child: DecoratedBox(
-                    decoration:
-                        BoxDecoration(color: Colors.black), // Color of the line
-                  ),
+                padding: EdgeInsets.only(top: 140.0, bottom: 80.0),
+                child: Divider(
+                  color: Colors.black,
+                  thickness: 2,
                 ),
               ),
               const MyPortfolio(),
               const Padding(
-                padding: EdgeInsets.only(bottom: 80.0, top: 140.0),
-                child: SizedBox(
-                  height: 2.0,
-                  width: 1600.0,
-                  child: DecoratedBox(
-                    decoration:
-                        BoxDecoration(color: Colors.black), // Color of the line
-                  ),
+                padding: EdgeInsets.only(top: 140.0, bottom: 80.0),
+                child: Divider(
+                  color: Colors.black,
+                  thickness: 2,
                 ),
               ),
               const Contact(),
