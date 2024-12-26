@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/contact.dart';
+import 'package:my_portfolio/footer.dart';
 import 'package:my_portfolio/portfolio.dart';
 import 'resume.dart';
 import 'skills.dart';
@@ -98,216 +99,247 @@ class _PortfolioHomeState extends State<PortfolioHome> {
     return Scaffold(
       backgroundColor: const Color(0xFF16243D),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.only(bottom: 100.0),
-          child: Column(
-            children: [
-              // ignore: avoid_unnecessary_containers
-              Positioned(
-                top: 0,
-                right: 0,
-                left: 0,
-                child: Container(
-                  height: 100.0,
-                  decoration:
-                      BoxDecoration(color: const Color(0xFF243148), boxShadow: [
-                    BoxShadow(
-                        color: Colors.black.withAlpha((0.25 * 255).toInt()),
-                        blurRadius: 5.0,
-                        offset: const Offset(2.0, 2.0))
-                  ]),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.only(left: 18.0),
-                        child: CircleAvatar(
-                          radius: 40.0,
-                          backgroundImage: AssetImage('images/profile.png'),
+        child: Column(
+          children: [
+            // ignore: avoid_unnecessary_containers
+            Positioned(
+              top: 0,
+              right: 0,
+              left: 0,
+              child: Container(
+                height: 100.0,
+                decoration:
+                    BoxDecoration(color: const Color(0xFF243148), boxShadow: [
+                  BoxShadow(
+                      color: Colors.black.withAlpha((0.25 * 255).toInt()),
+                      blurRadius: 5.0,
+                      offset: const Offset(2.0, 2.0))
+                ]),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(left: 18.0),
+                      child: CircleAvatar(
+                        radius: 40.0,
+                        backgroundImage: AssetImage('images/profile.png'),
+                      ),
+                    ),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 400.0),
+                        child: Row(
+                          children: [
+                            TextButton(
+                              onPressed: () {},
+                              child: const Text(
+                                'Home',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 40.0,
+                            ),
+                            TextButton(
+                              onPressed: () {},
+                              child: const Text(
+                                'Resume',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 40.0,
+                            ),
+                            TextButton(
+                              onPressed: () {},
+                              child: const Text(
+                                'Skills',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 40.0,
+                            ),
+                            TextButton(
+                              onPressed: () {},
+                              child: const Text(
+                                'Portfolio',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                            const SizedBox(
+                              width: 40.0,
+                            ),
+                            TextButton(
+                              onPressed: () {},
+                              child: const Text(
+                                'Contact',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                      Center(
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 400.0),
-                          child: Row(
-                            children: [
-                              TextButton(
-                                onPressed: () {},
-                                child: const Text(
-                                  'Home',
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 40.0,
-                              ),
-                              TextButton(
-                                onPressed: () {},
-                                child: const Text(
-                                  'Resume',
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 40.0,
-                              ),
-                              TextButton(
-                                onPressed: () {},
-                                child: const Text(
-                                  'Skills',
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 40.0,
-                              ),
-                              TextButton(
-                                onPressed: () {},
-                                child: const Text(
-                                  'Portfolio',
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 40.0,
-                              ),
-                              TextButton(
-                                onPressed: () {},
-                                child: const Text(
-                                  'Contact',
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                              ),
-                            ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 200.0,
+                left: 100.0,
+              ),
+              child: Row(
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Welcome to my page'.toUpperCase(),
+                        textAlign: TextAlign.start,
+                        style: const TextStyle(color: Colors.white),
+                      ),
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      const Text(
+                        'Hi, I am Hundessa Serbessa',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 60,
+                            fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        currentText,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 60,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(
+                        height: 20.0,
+                      ),
+                      ConstrainedBox(
+                        constraints: const BoxConstraints(maxWidth: 740.0),
+                        child: const Text(
+                          'I am a fifth-year student at Arba Minch University and a dedicated full-stack web developer. I specialize in React and Next.js for front-end development, and Node.js for the back end. Recently, I have started learning Go/Gin to expand my back-end expertise. Additionally, I’m exploring app development with Flutter, mastering DevOps practices, and enhancing my web design skills with Figma. My passion lies in crafting efficient and user-focused solutions.',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: 'Inter',
+                            height: 1.8,
+                          ),
+                          textAlign: TextAlign.justify,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 300.0,
+                  ),
+                  Column(
+                    children: [
+                      Container(
+                        width: 600.0,
+                        height: 600.0,
+                        decoration: const BoxDecoration(
+                          color: Color(0xFF16243D),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.white70, // Shadow color
+                              blurRadius: 10.0, // How soft the shadow is
+                              spreadRadius: 2.0, // How far the shadow spreads
+                              offset: Offset(1.0, 1.0), // X and Y offset
+                            ),
+                          ],
+                        ),
+                        child: OverflowBox(
+                          maxHeight: 1000.0,
+                          alignment: Alignment.bottomCenter,
+                          child: Image.asset(
+                            'images/ppp.png',
+                            fit: BoxFit.cover,
+                            height: 1000.0,
                           ),
                         ),
                       ),
                     ],
                   ),
-                ),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  top: 200.0,
-                  left: 100.0,
-                ),
-                child: Row(
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Welcome to my page'.toUpperCase(),
-                          textAlign: TextAlign.start,
-                          style: const TextStyle(color: Colors.white),
-                        ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
-                        const Text(
-                          'Hi, I am Hundessa Serbessa',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 60,
-                              fontWeight: FontWeight.w400),
-                        ),
-                        Text(
-                          currentText,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 60,
-                            fontWeight: FontWeight.w400,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
-                        ConstrainedBox(
-                          constraints: const BoxConstraints(maxWidth: 740.0),
-                          child: const Text(
-                            'I am a fifth-year student at Arba Minch University and a dedicated full-stack web developer. I specialize in React and Next.js for front-end development, and Node.js for the back end. Recently, I have started learning Go/Gin to expand my back-end expertise. Additionally, I’m exploring app development with Flutter, mastering DevOps practices, and enhancing my web design skills with Figma. My passion lies in crafting efficient and user-focused solutions.',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: 'Inter',
-                              height: 1.8,
-                            ),
-                            textAlign: TextAlign.justify,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      width: 300.0,
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          width: 600.0,
-                          height: 600.0,
-                          decoration: const BoxDecoration(
-                            color: Color(0xFF16243D),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.white70, // Shadow color
-                                blurRadius: 10.0, // How soft the shadow is
-                                spreadRadius: 2.0, // How far the shadow spreads
-                                offset: Offset(1.0, 1.0), // X and Y offset
-                              ),
-                            ],
-                          ),
-                          child: OverflowBox(
-                            maxHeight: 1000.0,
-                            alignment: Alignment.bottomCenter,
-                            child: Image.asset(
-                              'images/ppp.png',
-                              fit: BoxFit.cover,
-                              height: 1000.0,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 140.0, bottom: 80.0),
+              child: Divider(
+                color: Colors.black,
+                thickness: 2,
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 140.0, bottom: 80.0),
-                child: Divider(
-                  color: Colors.black,
-                  thickness: 2,
-                ),
+            ),
+            const Resume(),
+            const Padding(
+              padding: EdgeInsets.only(top: 140.0, bottom: 80.0),
+              child: Divider(
+                color: Colors.black,
+                thickness: 2,
               ),
-              const Resume(),
-              const Padding(
-                padding: EdgeInsets.only(top: 140.0, bottom: 80.0),
-                child: Divider(
-                  color: Colors.black,
-                  thickness: 2,
-                ),
+            ),
+            const Skills(),
+            const Padding(
+              padding: EdgeInsets.only(top: 140.0, bottom: 80.0),
+              child: Divider(
+                color: Colors.black,
+                thickness: 2,
               ),
-              const Skills(),
-              const Padding(
-                padding: EdgeInsets.only(top: 140.0, bottom: 80.0),
-                child: Divider(
-                  color: Colors.black,
-                  thickness: 2,
-                ),
+            ),
+            const MyPortfolio(),
+            const Padding(
+              padding: EdgeInsets.only(top: 140.0, bottom: 80.0),
+              child: Divider(
+                color: Colors.black,
+                thickness: 2,
               ),
-              const MyPortfolio(),
-              const Padding(
-                padding: EdgeInsets.only(top: 140.0, bottom: 80.0),
-                child: Divider(
-                  color: Colors.black,
-                  thickness: 2,
-                ),
+            ),
+            const Contact(),
+            const Padding(
+              padding: EdgeInsets.only(top: 140.0, bottom: 80.0),
+              child: Divider(
+                color: Colors.black,
+                thickness: 2,
               ),
-              const Contact(),
-            ],
-          ),
+            ),
+            const Footer(),
+            const Padding(
+              padding: EdgeInsets.only(top: 140.0, bottom: 80.0),
+              child: Divider(
+                color: Colors.black,
+                thickness: 2,
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 80.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.copyright,
+                    color: Colors.white70,
+                  ),
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Text(
+                    '2024 Hundessa Serbessa. All rights reserved.',
+                    style: TextStyle(color: Colors.white70, fontSize: 20),
+                  )
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );

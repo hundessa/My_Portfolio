@@ -56,31 +56,51 @@ class _ContactState extends State<Contact> {
         const SizedBox(
           height: 76,
         ),
-        const Column(
+        Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
+                Container(
                   width: 450.0,
-                  child: TextField(
+                  decoration:
+                      const BoxDecoration(color: Color(0xFF16243D), boxShadow: [
+                    BoxShadow(
+                      color: Colors.white70,
+                      blurRadius: 4.0,
+                      spreadRadius: 0,
+                      offset: Offset(0, 0),
+                    )
+                  ]),
+                  child: const TextField(
+                    style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                        border: OutlineInputBorder(),
+                        border: InputBorder.none,
                         hintText: 'First Name',
                         hintStyle: TextStyle(color: Colors.white),
                         filled: true,
                         fillColor: Color(0xFF16243D)),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 80.0,
                 ),
-                SizedBox(
+                Container(
                   width: 450.0,
-                  child: TextField(
+                  decoration:
+                      const BoxDecoration(color: Color(0xFF16243D), boxShadow: [
+                    BoxShadow(
+                      color: Colors.white70,
+                      blurRadius: 4.0,
+                      spreadRadius: 0,
+                      offset: Offset(0, 0),
+                    )
+                  ]),
+                  child: const TextField(
+                    style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: 'First Name',
+                        border: InputBorder.none,
+                        hintText: 'Last Name',
                         hintStyle: TextStyle(color: Colors.white),
                         filled: true,
                         fillColor: Color(0xFF16243D)),
@@ -88,38 +108,101 @@ class _ContactState extends State<Contact> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 44.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
+                Container(
                   width: 450.0,
-                  child: TextField(
+                  decoration:
+                      const BoxDecoration(color: Color(0xFF16243D), boxShadow: [
+                    BoxShadow(
+                      color: Colors.white70,
+                      blurRadius: 4.0,
+                      spreadRadius: 0,
+                      offset: Offset(0, 0),
+                    )
+                  ]),
+                  child: const TextField(
+                    style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: 'First Name',
+                        border: InputBorder.none,
+                        hintText: 'Email',
                         hintStyle: TextStyle(color: Colors.white),
                         filled: true,
                         fillColor: Color(0xFF16243D)),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 80.0,
                 ),
-                SizedBox(
+                Container(
                   width: 450.0,
-                  child: TextField(
+                  decoration:
+                      const BoxDecoration(color: Color(0xFF16243D), boxShadow: [
+                    BoxShadow(
+                      color: Colors.white70,
+                      blurRadius: 4.0,
+                      spreadRadius: 0,
+                      offset: Offset(0, 0),
+                    )
+                  ]),
+                  child: const TextField(
+                    style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: 'First Name',
+                        border: InputBorder.none,
+                        hintText: 'Phone Number',
                         hintStyle: TextStyle(color: Colors.white),
                         filled: true,
                         fillColor: Color(0xFF16243D)),
                   ),
                 ),
               ],
+            ),
+            const SizedBox(
+              height: 45.0,
+            ),
+            Container(
+              width: 980.0,
+              height: 230.0,
+              decoration:
+                  const BoxDecoration(color: Color(0xFF16243D), boxShadow: [
+                BoxShadow(
+                  color: Colors.white70,
+                  blurRadius: 4.0,
+                  spreadRadius: 0,
+                  offset: Offset(0, 0),
+                )
+              ]),
+              child: const TextField(
+                style: TextStyle(color: Colors.white),
+                maxLines: 10,
+                decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: 'Message',
+                    hintStyle: TextStyle(color: Colors.white),
+                    filled: true,
+                    fillColor: Color(0xFF16243D)),
+              ),
+            ),
+            const SizedBox(height: 45.0),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF162747),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 430, vertical: 16),
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.zero)),
+              child: const Text(
+                'Send Message',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
             )
           ],
         )
